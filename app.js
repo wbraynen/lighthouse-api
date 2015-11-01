@@ -19,7 +19,6 @@ function welcome(req, res) {
 
 function getTimeToDegree(req, res) {
 	console.log('Fetching time to degree...');
-
 	db.studentSupportAndOutcomes.find( {}, {_id: 0, "Program ID": 1, "Institution Name": 1, "Program Name": 1, "Median Time to Degree (Full- and Part-Time Graduates)": 1},
 		function(err, docs) {
 			if (err) {
@@ -48,8 +47,8 @@ function getTimeToDegreeForProgram(req, res) {
 }
 
 function send(req, res, collection, collectionName) {
+	console.log('Fetching ' + collectionName + '...');
 	collection.find( {}, {_id: 0 }, function(err, docs) {
-		console.log('Fetching ' + collectionName + '...');
 		if (err) {
 			res.send(err);
 		} else {
