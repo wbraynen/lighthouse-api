@@ -1,4 +1,4 @@
-## To see this service live
+## To use this service or see it live
 
 See http://lighthouse-api.org
 
@@ -40,6 +40,11 @@ I had to first export data from NRC's excel file to csv.  I broke up NRC's giant
 $ mongoimport --db nrc --collection studentSupportAndOutcomes --type=csv --headerline --file nrc.studentSupportAndOutcomes.csv
 ```
 And so on for each csv file to be imported as a mongo collection.
+I then used `mongodump` to create a production dump, which created a `dump` folder.  I then tarred this folder, pushed it to the repo, and then, having pulled it down from the repo onto the production machine, untarred it there:
+```
+$ tar cvf mongoDump.tar dump  # tarring, on my dev laptop
+$ tar xvf mongoDump.tar  # untarring, on the production machine
+```
 
 ### 4. Clone this repo and install Express in project directory
 
