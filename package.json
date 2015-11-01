@@ -1,5 +1,5 @@
 {
-	"name": "philphdapi",
+	"name": "lighthouse-api",
 	"versions": "1.0.0",
 	"description": "A queryable REST API for data about PhD programs in the United States",
 	"dependencies": {
