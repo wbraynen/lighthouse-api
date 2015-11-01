@@ -3,7 +3,7 @@
 See http://lighthouse-api.org
 
 
-## To install as your own Node.js service
+## To install as your own node.js service
 
 Quick-and-dirty instructions, so might be missing a step or two.
 
