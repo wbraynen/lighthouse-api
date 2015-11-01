@@ -13,7 +13,8 @@ var db = mongojs('nrc', collections);
 //
 
 function welcome(req, res) {
-	res.send('Welcome to philphdapi, the queryable REST API for philphd.org :-).\n');
+    
+    //res.send('Welcome to philphdapi, the queryable REST API for philphd.org :-).\n');
 }
 
 function getTimeToDegree(req, res) {
