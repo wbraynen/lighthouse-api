@@ -13,13 +13,12 @@ var db = mongojs('nrc', collections);
 //
 
 function welcome(req, res) {
-    var path = '/Users/will/Projects/lighthouse-api/'; // change this
+    var path = '/home/will/lighthouse-api'; // change this
     res.sendFile('index.html', { root: path });
 }
 
 function getTimeToDegree(req, res) {
 	console.log('Fetching time to degree...');
-
 	db.studentSupportAndOutcomes.find( {}, {_id: 0, "Program ID": 1, "Institution Name": 1, "Program Name": 1, "Median Time to Degree (Full- and Part-Time Graduates)": 1},
 		function(err, docs) {
 			if (err) {
@@ -48,8 +47,8 @@ function getTimeToDegreeForProgram(req, res) {
 }
 
 function send(req, res, collection, collectionName) {
+	console.log('Fetching ' + collectionName + '...');
 	collection.find( {}, {_id: 0 }, function(err, docs) {
-		console.log('Fetching ' + collectionName + '...');
 		if (err) {
 			res.send(err);
 		} else {
