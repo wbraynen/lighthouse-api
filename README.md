@@ -7,7 +7,12 @@ See http://lighthouse-api.org
 
 ## To install as your own node.js service
 
-Quick-and-dirty instructions, so might be missing a step or two.
+DISCLAIMER: Quick-and-dirty instructions, so might be missing a step or two, or three.
+
+You can install this on your laptop or up in the cloud.  Either way, you will need the following:
+- node and npm.
+- mongodb.
+- a clone of this repo.
 
 ### 1. Install node and npm.  On Ubuntu, this might look as follows:
 
