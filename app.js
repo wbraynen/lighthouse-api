@@ -13,7 +13,7 @@ var db = mongojs('nrc', collections);
 //
 
 function welcome(req, res) {
-    var path = '/Users/will/Projects/lighthouse-api/'; // change this
+    var path = '/home/will/lighthouse-api'; // change this
     res.sendFile('index.html', { root: path });
 }
 
