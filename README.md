@@ -1,13 +1,13 @@
-# To see this service live
+## To see this service live
 
 See http://lighthouse-api.org
 
 
-# To install as your own Node.js service:
+## To install as your own node.js service
 
 Quick-and-dirty instructions, so might be missing a step or two.
 
-## 1. Install node and npm.  On Ubuntu, this might look as follows:
+### 1. Install node and npm.  On Ubuntu, this might look as follows:
 
 ```
 $ sudo apt-get update
@@ -23,11 +23,11 @@ $ nvm use 0.12.7
 $ npm -v
 ```
 
-## 2. Install and launch mongodb
+### 2. Install and launch mongodb
 
-## 3. Import data into mongodb
+### 3. Import data into mongodb
 
-## 4. Clone this repo and install Express in project directory
+### 4. Clone this repo and install Express in project directory
 
 ```
 $ git clone 
