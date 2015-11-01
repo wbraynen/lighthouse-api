@@ -1,7 +1,6 @@
-# lighthouse-api
+# To see this service live
 
-To see this service live and use it without getting yourself into too much trouble, see instructions at http://lighthouse-api.org
-
+See http://lighthouse-api.org
 
 
 # To install as your own Node.js service:
