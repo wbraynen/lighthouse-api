@@ -2,6 +2,8 @@
 
 See http://lighthouse-api.org
 
+![Screenshot](screenshot.png)
+
 
 ## To install as your own node.js service
 
