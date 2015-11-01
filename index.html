@@ -1,22 +1,35 @@
 <html>
-<head></head>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 <body>
-<h2>Welcome to philphdapi, the queryable REST API for philphd.org :-).</h2>
-<p>This REST API provides the following endpoints:</p>
+<h1>lighthouse-api</h2>
 
-<table>
-  Data from the National Research Council's 2006 study<br>
-  <br>
-  &nbsp;&nbsp;GET <b>/timeToDegree</b><br>
+<p>Welcome to lighthouse-api, the queryable REST API for philphd.org :-).  This REST API provides a number of endpoints which return data from the National Research Council's 2006 study.  The data is returned in a JSON format.</p>
+
+<p>You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit.  The source code for this api can be found <a href="https://github.com/wbraynen/lighthouse-api" target="_top">on github</a>.</p>
+
+<p>
+<h3>Sample usage</h3>
+<p>
+  &nbsp;&nbsp;In a web browser:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://104.236.148.49:3000/timetodegree" target="_top">http://104.236.148.49:3000/timetodegree</a><br><br>
+  &nbsp;&nbsp;Using curl:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<code>$ curl http://104.236.148.49:3000/timetodegree</code>
+</p>
+
+<h3>Available endpoints</h3>
+<code>
   &nbsp;&nbsp;GET /dataNotUsedInRankings<br>
-  &nbsp;&nbsp;GET <b>/diversity</b><br>
-  &nbsp;&nbsp;GET <b>/emergingFields</b><br>
+  &nbsp;&nbsp;GET /diversity<br>
+  &nbsp;&nbsp;GET /emergingFields<br>
   &nbsp;&nbsp;GET /generalInformation<br>
   &nbsp;&nbsp;GET /otherOverallRankingMeasures<br>
   &nbsp;&nbsp;GET /rankings<br>
   &nbsp;&nbsp;GET /researchActivity<br>
   &nbsp;&nbsp;GET /studentActivities<br>
-  &nbsp;&nbsp;GET <b>/studentSupportAndOutcomes</b><br>
-</table>
+  &nbsp;&nbsp;GET /studentSupportAndOutcomes<br>
+  &nbsp;&nbsp;GET /timeToDegree<br>
+</code>
 
 </body>

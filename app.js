@@ -9,7 +9,29 @@ var db = mongojs('nrc', collections);
 
 
 //
-// Views
+// Router / Controller
+//
+app.get('/', welcome);
+app.get('/timeToDegree', getTimeToDegree);
+app.get('/timeToDegree/:id', getTimeToDegreeForProgram);
+
+app.get('/dataNotUsedInRankings', getDataNotUsedInRankings);
+app.get('/diversity', getDiversity);
+app.get('/emergingFields', getEmergingFields);
+app.get('/generalInformation', getGeneralInformation);
+app.get('/otherOverallRankingMeasures', getOtherOverallRankingMeasures);
+app.get('/rankings', getRankings);
+app.get('/researchActivity', getResearchActivity);
+app.get('/studentActivities', getStudentActivities);
+app.get('/studentSupportAndOutcomes', getStudentSupportAndOutcomes);
+
+app.listen(3000);
+console.log('Node.js Express server is running on port 3000...');
+
+
+
+//
+// "Views"
 //
 
 function welcome(req, res) {
@@ -98,23 +120,3 @@ function getStudentSupportAndOutcomes(req, res) {
 	send(req, res, db.studentSupportAndOutcomes, 'studentSupportAndOutcomes');
 }
 
-
-//
-// Router / Controller
-//
-app.get('/', welcome);
-app.get('/timeToDegree', getTimeToDegree);
-app.get('/timeToDegree/:id', getTimeToDegreeForProgram);
-
-app.get('/dataNotUsedInRankings', getDataNotUsedInRankings);
-app.get('/diversity', getDiversity);
-app.get('/emergingFields', getEmergingFields);
-app.get('/generalInformation', getGeneralInformation);
-app.get('/otherOverallRankingMeasures', getOtherOverallRankingMeasures);
-app.get('/rankings', getRankings);
-app.get('/researchActivity', getResearchActivity);
-app.get('/studentActivities', getStudentActivities);
-app.get('/studentSupportAndOutcomes', getStudentSupportAndOutcomes);
-
-app.listen(3000);
-console.log('Node.js Express server is running on port 3000...');
