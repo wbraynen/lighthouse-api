@@ -13,8 +13,8 @@ var db = mongojs('nrc', collections);
 //
 
 function welcome(req, res) {
-    
-    //res.send('Welcome to philphdapi, the queryable REST API for philphd.org :-).\n');
+    var path = '/Users/will/Projects/lighthouse-api/'; // change this
+    res.sendFile('index.html', { root: path });
 }
 
 function getTimeToDegree(req, res) {
