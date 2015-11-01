@@ -14,20 +14,12 @@ You can install this on your laptop or up in the cloud.  Either way, you will ne
 - mongodb.
 - a clone of this repo.
 
-### 1. Install node and npm.  On Ubuntu, this might look as follows:
+### 1. Clone this repo and install Express in project directory
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install build-essential libssl-dev
-# if necessary: rm -rf /root/.nvm
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
-$ source ~/.profile
-$ nvm --version
-
-$ nvm ls-remote
-$ nvm install 0.12.7
-$ nvm use 0.12.7
-$ npm -v
+$ git clone 
+$ cd lighthouse-api
+$ npm install   # This will install the dependencies listed in package.json
 ```
 
 ### 2. Install and launch mongodb
@@ -46,10 +38,18 @@ $ tar cvf mongoDump.tar dump  # tarring, on my dev laptop
 $ tar xvf mongoDump.tar  # untarring, on the production machine
 ```
 
-### 4. Clone this repo and install Express in project directory
+### 4. Install node and npm.  On Ubuntu, this might look as follows:
 
 ```
-$ git clone 
-$ cd lighthouse-api
-$ npm install   # This will install the dependencies listed in package.json
+$ sudo apt-get update
+$ sudo apt-get install build-essential libssl-dev
+# if necessary: rm -rf /root/.nvm
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+$ source ~/.profile
+$ nvm --version
+
+$ nvm ls-remote
+$ nvm install 0.12.7
+$ nvm use 0.12.7
+$ npm -v
 ```
