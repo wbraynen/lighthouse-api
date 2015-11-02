@@ -6,6 +6,9 @@ Welcome to lighthouse-api, the queryable REST API for philphd.org :-). This REST
 
 You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. 
 
+This is the same dataset that is used by [philphd.org](http://philphd.org).
+
+
 ### Sample usage
 
 In a web browser:
