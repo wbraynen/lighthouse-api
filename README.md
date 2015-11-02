@@ -19,14 +19,14 @@ $ curl http://104.236.148.49:3000/timetodegree
 ### Available endpoints (case insensitive, so all lowercase is fine:)
 
 ```
-  GET /dataNotUsedInRankings
-  GET /diversity
-  GET /emergingFields
-  GET /generalInformation
-  GET /otherOverallRankingMeasures
-  GET /rankings
-  GET /researchActivity
-  GET /studentActivities
-  GET /studentSupportAndOutcomes
-  GET /timeToDegree
+GET /dataNotUsedInRankings
+GET /diversity
+GET /emergingFields
+GET /generalInformation
+GET /otherOverallRankingMeasures
+GET /rankings
+GET /researchActivity
+GET /studentActivities
+GET /studentSupportAndOutcomes
+GET /timeToDegree
 ```
