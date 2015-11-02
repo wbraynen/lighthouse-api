@@ -9,8 +9,13 @@ $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh |
 $ source ~/.profile
 $ nvm --version
 ```
+Yay, we get a version number, confirming that we have successfully installed nvm.
+
 ```
 $ nvm ls-remote
+```
+Write down the latest version number, which is NOT on the last line of the output.  Mine is 0.12.7
+```
 $ nvm install 0.12.7
 $ nvm use 0.12.7
 $ npm -v
