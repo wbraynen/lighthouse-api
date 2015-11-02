@@ -2,7 +2,7 @@
 
 ![Screenshot](screenshot.png)
 
-Welcome to lighthouse-api, the queryable REST API for philphd.org :-). This REST API provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in a JSON format.
+lighthouse-api is a queryable REST API.  It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.
 
 You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. 
 
