@@ -84,6 +84,9 @@ $ mongoexport --db nrc --collection diversity --type=csv --out diversity.csv --f
 Production dump (bson):
 ```
 $ mongodump --db nrc
+```
+This creates a production (or dev or staging) dump of database `nrc`.  The result is a folder called `dump`.  If you need to transfer this data dump to another server to import it there, then you might want to "zip up" this `dump` folder, like so:
+```
 $ tar cvf dump.tar dump   # create tarball
 $ tar xvf dump.tar   # extract from tarball (i.e. untar)
 ```
