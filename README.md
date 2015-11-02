@@ -1,56 +1,35 @@
-## To use this service or see it live
-
-See http://lighthouse-api.org
+# lighthouse-api
 
 ![Screenshot](screenshot.png)
 
+lighthouse-api is a queryable REST API.  It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.
 
-## To install as your own node.js service
+You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. 
 
-DISCLAIMER: Quick-and-dirty instructions, so might be missing a step or two, or three.
+This is the same dataset that is used by [philphd.org](http://philphd.org).
 
-You can install this on your laptop or up in the cloud.  Either way, you will need the following:
-- node and npm.
-- mongodb.
-- a clone of this repo.
 
-### 1. Clone this repo and install Express in project directory
+### Sample usage
 
+In a web browser:
+[http://104.236.148.49:3000/timetodegree](http://104.236.148.49:3000/timetodegree). If you use chrome with a json formatter extension added, the returned JSON will look much more readable. (Here is a json formatter chrome extension I use.)
+
+Using curl:
 ```
-$ git clone 
-$ cd lighthouse-api
-$ npm install   # This will install the dependencies listed in package.json
-```
-
-### 2. Install and launch mongodbth
-
-### 3. Import the production dump into mongodb
-
-In case you are curious, here's what I had to do, though you don't have to and shouldn't have to do this at all:
-I had to first export data from NRC's excel file to csv.  I broke up NRC's giant master excel file into a collection of csv files (e.g. one for diversity metrics, one for student outcomes, and so on).  Then, I imported the csv files into mongo, one collection at a time (with one csv file corresponding to one collection), like so:
-```
-$ mongoimport --db nrc --collection studentSupportAndOutcomes --type=csv --headerline --file nrc.studentSupportAndOutcomes.csv
-```
-And so on for each csv file to be imported as a mongo collection.
-
-I then used `mongodump` to create a production dump, which created a `dump` folder.  I then tarred this folder, pushed it to the repo, and then, having pulled it down from the repo onto the production machine, untarred it there:
-```
-$ tar cvf mongoDump.tar dump  # tarring, on my dev laptop
-$ tar xvf mongoDump.tar  # untarring, on the production machine
+$ curl http://104.236.148.49:3000/timetodegree
 ```
 
-### 4. Install node and npm.  On Ubuntu, this might look as follows:
+### Available endpoints (case insensitive, so all lowercase is fine:)
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install build-essential libssl-dev
-# if necessary: rm -rf /root/.nvm
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
-$ source ~/.profile
-$ nvm --version
-
-$ nvm ls-remote
-$ nvm install 0.12.7
-$ nvm use 0.12.7
-$ npm -v
+GET /dataNotUsedInRankings
+GET /diversity
+GET /emergingFields
+GET /generalInformation
+GET /otherOverallRankingMeasures
+GET /rankings
+GET /researchActivity
+GET /studentActivities
+GET /studentSupportAndOutcomes
+GET /timeToDegree
 ```
