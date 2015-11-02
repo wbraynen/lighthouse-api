@@ -1,11 +1,12 @@
 {
-	"name": "lighthouse-api",
-	"versions": "1.0.0",
-	"description": "A queryable REST API for data about PhD programs in the United States",
-	"repository": "https://github.com/wbraynen/lighthouse-api",
-	"dependencies": {
-		"express": "*",
-		"body-parser": "*",
-		"mongojs": "*"
-	}
+  "name": "lighthouse-api",
+  "versions": "1.0.0",
+  "license": "MIT",
+  "description": "A queryable REST API for data about PhD programs in the United States",
+  "repository": "https://github.com/wbraynen/lighthouse-api",
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "mongojs": "*"
+  }
 }
