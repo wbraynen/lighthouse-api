@@ -1,6 +1,8 @@
 # lighthouse-api
 
-[lighthouse-api.org](http://lighthouse-api.org)
+Landing page: [lighthouse-api.org](http://lighthouse-api.org)
+
+Main source code: [app.js](app.js)
 
 ![Screenshot](screenshot.png)
 
