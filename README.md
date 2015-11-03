@@ -11,7 +11,7 @@
 
 You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. 
 
-This is the same dataset that is used by [philphd.org](http://philphd.org).
+[philphd.org](http://philphd.org) uses a part of this dataset.
 
 Technical note: In addition to Node.js, I used Express.js; but not express-generator.
 
