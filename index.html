@@ -14,7 +14,7 @@
 <img width="650px" src="https://raw.githubusercontent.com/wbraynen/lighthouse-api/master/screenshot.png">
 <br>
 <br>
-<p><code>lighthouse-api</code> is a queryable REST API, implemented using Node.js (with Express.js) and mongodb. It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.</p>
+<p><code>lighthouse-api</code> is a queryable REST API, implemented using Node.js and MongoDB. It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.</p>
 
 <p>You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit.  The source code for this api can be found <a href="https://github.com/wbraynen/lighthouse-api" target="_top">on github</a>.</p>
 
@@ -23,9 +23,8 @@
 <p>
 <h3>Sample usage</h3>
   <h4>In a web browser:</h4>
-  <table><tr>
-  <p><a href="http://104.236.148.49:3000/timetodegree" target="_top">http://104.236.148.49:3000/timetodegree</a>.
-  If you use chrome with <a href="https://github.com/callumlocke/json-formatter" target="_top">a json formatter chrome extension</a> added, the returned JSON will look much more readable.
+  <p><a href="http://104.236.148.49:3000/timetodegree" target="_top">http://104.236.148.49:3000/timetodegree</a><br> 
+  (If you use chrome with <a href="https://github.com/callumlocke/json-formatter" target="_top">a json formatter chrome extension</a>, the returned JSON will look much more readable, like in the screenshot above.)
   </p>
   <h4>Using curl:</h4>
   <code>$ curl http://104.236.148.49:3000/timetodegree</code>
