@@ -1,44 +1,19 @@
 <html>
-
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 <style>
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-body {
+  body {
     margin: 20px;
     padding: 20px;
-}
-
-p {
-    max-width: 650px;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
+  }
 </style>
 </head>
 
 <body>
 <h1>lighthouse-api</h2>
-
 <img width="650px" src="https://raw.githubusercontent.com/wbraynen/lighthouse-api/master/screenshot.png">
-
+<br>
+<br>
 <p><code>lighthouse-api</code> is a queryable REST API, implemented using Node.js (with Express.js) and mongodb. It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.</p>
 
 <p>You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit.  The source code for this api can be found <a href="https://github.com/wbraynen/lighthouse-api" target="_top">on github</a>.</p>
@@ -47,26 +22,26 @@ hr {
 
 <p>
 <h3>Sample usage</h3>
-<p>
-  &nbsp;&nbsp;In a web browser:<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://104.236.148.49:3000/timetodegree" target="_top">http://104.236.148.49:3000/timetodegree</a>.  If you use chrome with a json formatter extension added, the returned JSON will look much more readable.  (<a href="https://github.com/callumlocke/json-formatter" target="_top">Here is a json formatter</a> chrome extension I use.)
-  <br><br>
-  &nbsp;&nbsp;Using curl:<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;<code>$ curl http://104.236.148.49:3000/timetodegree</code>
+  <h4>In a web browser:</h4>
+  <table><tr>
+  <p><a href="http://104.236.148.49:3000/timetodegree" target="_top">http://104.236.148.49:3000/timetodegree</a>.  If you use chrome with a json formatter extension added, the returned JSON will look much more readable.  <a href="https://github.com/callumlocke/json-formatter" target="_top">Here is a json formatter</a> chrome extension I use.
+  </p>
+  <h4>Using curl:</h4>
+  <code>$ curl http://104.236.148.49:3000/timetodegree</code>
 </p>
 
 <h3>Available endpoints (case insensitive, so all lowercase is fine:)</h3>
 <code>
-  &nbsp;&nbsp;GET /dataNotUsedInRankings<br>
-  &nbsp;&nbsp;GET /diversity<br>
-  &nbsp;&nbsp;GET /emergingFields<br>
-  &nbsp;&nbsp;GET /generalInformation<br>
-  &nbsp;&nbsp;GET /otherOverallRankingMeasures<br>
-  &nbsp;&nbsp;GET /rankings<br>
-  &nbsp;&nbsp;GET /researchActivity<br>
-  &nbsp;&nbsp;GET /studentActivities<br>
-  &nbsp;&nbsp;GET /studentSupportAndOutcomes<br>
-  &nbsp;&nbsp;GET /timeToDegree<br>
+&nbsp;GET /dataNotUsedInRankings<br>
+&nbsp;GET /diversity<br>
+&nbsp;GET /emergingFields<br>
+&nbsp;GET /generalInformation<br>
+&nbsp;GET /otherOverallRankingMeasures<br>
+&nbsp;GET /rankings<br>
+&nbsp;GET /researchActivity<br>
+&nbsp;GET /studentActivities<br>
+&nbsp;GET /studentSupportAndOutcomes<br>
+&nbsp;GET /timeToDegree<br>
 </code>
 
 </body>
