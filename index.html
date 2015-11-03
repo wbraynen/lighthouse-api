@@ -17,9 +17,9 @@
 <br>
 <p><code>lighthouse-api</code> is a queryable REST API, implemented using Node.js and MongoDB. It provides a number of endpoints which return all the data from the <a href="http://www.nap.edu/rdp/" target="_top">National Research Council's 2006 study</a> (revised in 2011) of over 5000 PhD programs in the United States. The data is returned in JSON format.</p>
 
-<p>You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit.  The source code for this api can be found <a href="https://github.com/wbraynen/lighthouse-api" target="_top">on github</a>.</p>
+<p>You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. The search engine <a href="http://philphd.org" target="_top">philphd.org</a>, for example, uses a part of this dataset.</p>
 
-<p>This is the same dataset that is used by <a href="http://philphd.org" target="_top">philphd.org.</a></p>
+The source code for this API can be found <a href="https://github.com/wbraynen/lighthouse-api" target="_top">on github</a>.</p>
 
 <p>
 <h3>Sample usage</h3>
@@ -31,7 +31,8 @@
   <code>$ curl http://104.236.148.49:3000/timetodegree</code>
 </p>
 
-<h3>Available endpoints (case insensitive, so all lowercase is fine:)</h3>
+<h3>Available endpoints</h3>
+<p>These are case insensitive, so all lowercase is fine :).</p>
 <code>GET /dataNotUsedInRankings</code><br>
 <code>GET /diversity</code><br>
 <code>GET /emergingFields</code><br>
