@@ -7,7 +7,7 @@
 | Landing page: | [lighthouse-api.org](http://lighthouse-api.org) |
 | Main source code: | [app.js](app.js) |
 
-<code>lighthouse-api</code> is a queryable REST API, implemented using Node.js (with Express.js) and mongodb.  It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.
+<code>lighthouse-api</code> is a queryable REST API, implemented using Node.js and mongodb.  (I used Express.js, but not express-generator.)  It provides a number of endpoints which return data from the National Research Council's 2006 study. The data is returned in JSON format.
 
 You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. 
 
