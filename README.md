@@ -17,7 +17,8 @@ This is the same dataset that is used by [philphd.org](http://philphd.org).
 ### Sample usage
 
 In a web browser:
-[http://104.236.148.49:3000/timetodegree](http://104.236.148.49:3000/timetodegree). If you use chrome with a json formatter extension added, the returned JSON will look much more readable. (Here is a json formatter chrome extension I use.)
+[http://104.236.148.49:3000/timetodegree](http://104.236.148.49:3000/timetodegree). 
+(If you use chrome with a json formatter extension added, the returned JSON will look much more readable.)
 
 Using curl:
 ```
