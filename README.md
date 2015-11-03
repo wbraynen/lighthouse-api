@@ -7,11 +7,13 @@
 | Landing page: | [lighthouse-api.org](http://lighthouse-api.org) |
 | Main source code: | [app.js](app.js) |
 
-<code>lighthouse-api</code> is a queryable REST API, implemented using Node.js and MongoDB.  (I used Express.js, but not express-generator.)  It provides a number of endpoints which return all the data from the [National Research Council's 2006 study](http://www.nap.edu/rdp/) (revised in 2011) of over 5000 PhD programs in the United States. The data is returned in JSON format.
+<code>lighthouse-api</code> is a queryable REST API, implemented using Node.js and MongoDB.  It provides a number of endpoints which return all the data from the [National Research Council's 2006 study](http://www.nap.edu/rdp/) (revised in 2011) of over 5000 PhD programs in the United States. The data is returned in JSON format.
 
 You can either query the data directly, build a GUI (e.g. a iOS app or a search engine in the form of a website) that consumes these endpoints, or you can even mirror this service and modify it to fit your needs as you see fit. 
 
 This is the same dataset that is used by [philphd.org](http://philphd.org).
+
+Technical note: In addition to Node.js, I used Express.js; but not express-generator.
 
 
 ### Sample usage
