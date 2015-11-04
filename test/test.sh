@@ -1,9 +1,8 @@
  #!/bin/sh
 
 # restore db
-cd data
-tar xvf mongoDump.tar
-mongorestore dump
+tar xvf data/mongoDump.tar
+mongorestore data/dump
 
 # run mocha tests
 npm test
