@@ -37,5 +37,5 @@ GET /nrc/rankings
 GET /nrc/researchActivity
 GET /nrc/studentActivities
 GET /nrc/studentSupportAndOutcomes
-GET /nrc/timeToDegree
+GET /nrc/timeToDegree  # this is a subset of `GET /nrc/studentSupportAndOutcomes`
 ```
