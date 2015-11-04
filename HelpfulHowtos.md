@@ -81,12 +81,13 @@ Exporting to csv:
 $ mongoexport --db nrc --collection diversity --type=csv --out diversity.csv --fields 'Broad Field','Field','Institution Name','Program Name','Number of Core Faculty','Number of New Faculty','Number of Associated Faculty,''Number of Students Enrolled (2005-2006)','Number of Students Currently Enrolled Who Are in the Candidacy Stage (2005-2006)'
 ```
 
-Production dump (bson):
+Creating production dump:
 ```
-$ mongodump --db nrc
+$ mongodump --db nrc  # dump of database `nrc`
+$ tar cvf dump.tar dump  # "zips up" the dump folder
 ```
-This creates a production (or dev or staging) dump of database `nrc`.  The result is a folder called `dump`.  If you need to transfer this data dump to another server to import it there, then you might want to "zip up" this `dump` folder, like so:
+Restoring from production dump:
 ```
-$ tar cvf dump.tar dump   # create tarball
-$ tar xvf dump.tar   # extract from tarball (i.e. untar)
+$ tar xvf dump.tar   # "unzip" dump folder
+$ mongorestore dump
 ```
