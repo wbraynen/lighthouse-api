@@ -39,3 +39,11 @@ GET /nrc/studentActivities
 GET /nrc/studentSupportAndOutcomes
 GET /nrc/timeToDegree  # this is a subset of `GET /nrc/studentSupportAndOutcomes`
 ```
+
+# If you clone this repo and run this api server yourself
+
+You can run mocha acceptance tests like so:
+```
+$ npm test
+```
+In fact, this is what TravisCI does when I `git push`.
