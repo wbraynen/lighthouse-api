@@ -42,13 +42,11 @@ function welcome(req, res) {
 }
 
 function getTimeToDegree(req, res) {
-	console.log('Fetching time to degree...');
 	db.studentSupportAndOutcomes.find( {}, {_id: 0, "Program ID": 1, "Institution Name": 1, "Program Name": 1, "Median Time to Degree (Full- and Part-Time Graduates)": 1},
 		function(err, docs) {
 			if (err) {
 				res.send(err);
 			} else {
-				console.log( ' Sending time to degree.' );
 				res.json(docs);
 			}
 		}
@@ -57,68 +55,65 @@ function getTimeToDegree(req, res) {
 
 function getTimeToDegreeForProgram(req, res) {
 	var programId = parseInt(req.params.id);
-	console.log('Fetching time to degree for Program ID ' + programId);
 	db.studentSupportAndOutcomes.findOne( {"Program ID": programId}, {_id: 0, "Program ID": 1, "Institution Name": 1, "Program Name": 1, "Median Time to Degree (Full- and Part-Time Graduates)": 1},
 		function(err, docs) {
 			if (err) {
 				res.send(err);
 			} else {
-				console.log( ' Sending time to degree for Program ID ' + programId);
 				res.json(docs);
 			}
 		}
 	);
 }
 
-function send(req, res, collection, collectionName) {
-	console.log('Fetching ' + collectionName + '...');
+function send(req, res, collection) {
 	collection.find( {}, {_id: 0 }, function(err, docs) {
 		if (err) {
 			res.send(err);
 		} else {
-			console.log(' Sending ' + collectionName + '.');
 			res.json(docs);
 		}
 	});
 }
 
 function getDataNotUsedInRankings(req, res) {
-	send(req, res, db.dataNotUsedInRankings, 'dataNotUsedInRankings');
+	send(req, res, db.dataNotUsedInRankings);
 }
 
 function getDiversity(req, res) {
-	send(req, res, db.diversity, 'diversity');
+	send(req, res, db.diversity);
 }
 
 function getEmergingFields(req, res) {
-	send(req, res, db.emergingFields, 'emergingFields');
+	send(req, res, db.emergingFields);
 }
 
 function getGeneralInformation(req, res) {
-	send(req, res, db.generalInformation, 'generalInformation');
+	send(req, res, db.generalInformation);
 }
 
 function getOtherOverallRankingMeasures(req, res) {
-	send(req, res, db.otherOverallRankingMeasures, 'otherOverallRankingMeasures');
+	send(req, res, db.otherOverallRankingMeasures);
 }
 
 function getGeneralInformation(req, res) {
-	send(req, res, db.generalInformation, 'generalInformation');
+	send(req, res, db.generalInformation);
 }
 
 function getRankings(req, res) {
-	send(req, res, db.rankings, 'rankings');
+	send(req, res, db.rankings);
 }
 
 function getResearchActivity(req, res) {
-	send(req, res, db.researchActivity, 'researchActivity');
+	send(req, res, db.researchActivity);
 }
 
 function getStudentActivities(req, res) {
-	send(req, res, db.studentActivities, 'studentActivities');
+	send(req, res, db.studentActivities);
 }
 
 function getStudentSupportAndOutcomes(req, res) {
-	send(req, res, db.studentSupportAndOutcomes, 'studentSupportAndOutcomes');
+	send(req, res, db.studentSupportAndOutcomes);
 }
 
+module.exports.server = app;
