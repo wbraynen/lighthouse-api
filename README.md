@@ -18,24 +18,24 @@ Technical note for the technically curious: In addition to Node.js, I used Expre
 
 ##### In a web browser:
 
-[http://104.236.148.49:3000/timetodegree](http://104.236.148.49:3000/timetodegree). (If you use chrome with a json formatter extension added, the returned JSON will look much more readable.)
+[http://104.236.148.49:3000/nrc/diversity](http://104.236.148.49:3000/nrc/diversity). (If you use chrome with a json formatter extension added, the returned JSON will look much more readable.)
 
 ##### Using curl:
 ```
-$ curl http://104.236.148.49:3000/timetodegree
+$ curl http://104.236.148.49:3000/nrc/diversity
 ```
 
 ### Available endpoints (case insensitive, so all lowercase is fine:)
 
 ```
-GET /dataNotUsedInRankings
-GET /diversity
-GET /emergingFields
-GET /generalInformation
-GET /otherOverallRankingMeasures
-GET /rankings
-GET /researchActivity
-GET /studentActivities
-GET /studentSupportAndOutcomes
-GET /timeToDegree
+GET /nrc/dataNotUsedInRankings
+GET /nrc/diversity
+GET /nrc/emergingFields
+GET /nrc/generalInformation
+GET /nrc/otherOverallRankingMeasures
+GET /nrc/rankings
+GET /nrc/researchActivity
+GET /nrc/studentActivities
+GET /nrc/studentSupportAndOutcomes
+GET /nrc/timeToDegree  # this is a subset of `GET /nrc/studentSupportAndOutcomes`
 ```
