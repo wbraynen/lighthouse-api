@@ -12,18 +12,20 @@ var db = mongojs('nrc', collections);
 // Router / Controller
 //
 app.get('/', welcome);
-app.get('/timeToDegree', getTimeToDegree);
-app.get('/timeToDegree/:id', getTimeToDegreeForProgram);
+app.get('/nrc/', welcome);
 
-app.get('/dataNotUsedInRankings', getDataNotUsedInRankings);
-app.get('/diversity', getDiversity);
-app.get('/emergingFields', getEmergingFields);
-app.get('/generalInformation', getGeneralInformation);
-app.get('/otherOverallRankingMeasures', getOtherOverallRankingMeasures);
-app.get('/rankings', getRankings);
-app.get('/researchActivity', getResearchActivity);
-app.get('/studentActivities', getStudentActivities);
-app.get('/studentSupportAndOutcomes', getStudentSupportAndOutcomes);
+app.get('/nrc/timeToDegree', getTimeToDegree);
+app.get('/nrc/timeToDegree/:id', getTimeToDegreeForProgram);
+
+app.get('/nrc/dataNotUsedInRankings', getDataNotUsedInRankings);
+app.get('/nrc/diversity', getDiversity);
+app.get('/nrc/emergingFields', getEmergingFields);
+app.get('/nrc/generalInformation', getGeneralInformation);
+app.get('/nrc/otherOverallRankingMeasures', getOtherOverallRankingMeasures);
+app.get('/nrc/rankings', getRankings);
+app.get('/nrc/researchActivity', getResearchActivity);
+app.get('/nrc/studentActivities', getStudentActivities);
+app.get('/nrc/studentSupportAndOutcomes', getStudentSupportAndOutcomes);
 
 app.listen(3000);
 console.log('Node.js Express server is running on port 3000...');
