@@ -4,4 +4,4 @@ services:
   - mongodb
 
 script:
-  - ./test/setup.sh
+  - ./test/test.sh
