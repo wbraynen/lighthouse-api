@@ -48,4 +48,4 @@ $ npm test
 ```
 In fact, this is what TravisCI does when I `git push`.  If you run the acceptance tests yourself, then it might look like so:
 
-![image](https://cloud.githubusercontent.com/assets/4765449/10952161/92cedb82-82fe-11e5-87fd-80781791b627.png)
+![image](https://cloud.githubusercontent.com/assets/4765449/10952204/cff00ca2-82fe-11e5-9444-0e121971aaee.png)
