@@ -42,8 +42,9 @@ GET /nrc/timeToDegree  # this is a subset of `GET /nrc/studentSupportAndOutcomes
 
 # If you clone this repo and run this api server yourself
 
-You can run mocha acceptance tests like so:
+If you want to clone this repo and run this api server yourself, then you might find [HelpfulHowtos.md](HelpfulHowtos.md) useful.  You can then also run mocha acceptance tests like so:
 ```
 $ npm test
 ```
-In fact, this is what TravisCI does when I `git push`.
+In fact, this is what TravisCI does when I `git push`.  If you run the acceptance tests yourself, then it might look like so:
+
