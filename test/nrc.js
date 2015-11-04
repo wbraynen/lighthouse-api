@@ -64,7 +64,7 @@ describe('/nrc endpoints', function() {
     expectJson(done, '/nrc/timeToDegree')
   })
 
-  it('404 everything else', function testPath(done) {
+  it('404 everything else: let\'s try /nrc/foobar', function testPath(done) {
     request(server)
       .get('/nrc/foobar')
       .expect(404, done)
