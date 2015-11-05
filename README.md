@@ -46,6 +46,6 @@ If you want to clone this repo and run this api server yourself, then you might 
 ```
 $ npm test
 ```
-In fact, this is what TravisCI does when I `git push`.  If you run the acceptance tests yourself, then it might look like so:
+This is, in fact, what I have TravisCI do on my behalf.  If you run the acceptance tests yourself, then it might look like so:
 
 ![image](https://cloud.githubusercontent.com/assets/4765449/10952204/cff00ca2-82fe-11e5-9444-0e121971aaee.png)
