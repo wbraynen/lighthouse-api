@@ -7,10 +7,10 @@ var mongojs = require('mongojs');
 var collections = ['dataNotUsedInRankings', 'diversity', 'emergingFields', 'generalInformation', 'otherOverallRankingMeasures', 'rankings', 'researchActivity', 'studentActivities', 'studentSupportAndOutcomes'];
 var db = mongojs('nrc', collections);
 
+app.listen(3000);
+console.log('Node.js Express server is running on port 3000...');
 
-//
-// Router / Controller
-//
+
 app.get('/', welcome);
 app.get('/nrc/', welcome);
 
@@ -27,14 +27,6 @@ app.get('/nrc/researchActivity', getResearchActivity);
 app.get('/nrc/studentActivities', getStudentActivities);
 app.get('/nrc/studentSupportAndOutcomes', getStudentSupportAndOutcomes);
 
-app.listen(3000);
-console.log('Node.js Express server is running on port 3000...');
-
-
-
-//
-// "Views"
-//
 
 function welcome(req, res) {
     var path = '/home/will/lighthouse-api'; // change this
