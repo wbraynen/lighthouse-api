@@ -1,10 +1,10 @@
-"use strict";
+"use strict"
 
 var express = require('express')
 var app = express()
 
 var mongojs = require('mongojs')
-var collections = ['dataNotUsedInRankings', 'diversity', 'emergingFields', 'generalInformation', 'otherOverallRankingMeasures', 'rankings', 'researchActivity', 'studentActivities', 'studentSupportAndOutcomes'];
+var collections = ['dataNotUsedInRankings', 'diversity', 'emergingFields', 'generalInformation', 'otherOverallRankingMeasures', 'rankings', 'researchActivity', 'studentActivities', 'studentSupportAndOutcomes']
 var db = mongojs('nrc', collections)
 
 app.listen(3000)
@@ -29,7 +29,7 @@ app.get('/nrc/studentSupportAndOutcomes', getStudentSupportAndOutcomes)
 
 
 function welcome(req, res) {
-    var path = '/home/will/lighthouse-api'; // change this
+    var path = '/home/will/lighthouse-api' // change this
     res.sendFile('index.html', { root: path })
 }
 
