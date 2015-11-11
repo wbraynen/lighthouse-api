@@ -7,9 +7,14 @@
   "dependencies": {
     "express": "*",
     "body-parser": "*",
+  
     "mongojs": "*",
+
     "mocha": "*",
-    "supertest": "*"
+    "supertest": "*",
+
+    "redis": "",
+    "hiredis": ""
   },
   "scripts": {
     "test": "mocha"

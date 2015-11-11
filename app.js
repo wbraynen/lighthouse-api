@@ -7,6 +7,37 @@ var mongojs = require('mongojs')
 var collections = ['dataNotUsedInRankings', 'diversity', 'emergingFields', 'generalInformation', 'otherOverallRankingMeasures', 'rankings', 'researchActivity', 'studentActivities', 'studentSupportAndOutcomes']
 var db = mongojs('nrc', collections)
 
+var redis = require('redis')
+var redisClient = redis.createClient()
+redisClient.on('connect', function() {
+    console.log('connected')
+})
+precacheCommonRoutes()
+
+function precache( route, collection ) {
+	collection.find( {}, {_id: 0 }, function(err, docs) {
+		if (err) {
+			console.log( 'Couldn\'t find on disk ' + route )
+			console.log( '  and so, failed to precache it.' )
+		} else {
+			redisClient.set( route, JSON.stringify(docs) )
+			console.log( 'Precached ' + route )
+		}
+	})
+}
+
+function precacheCommonRoutes() {
+	precache( '/nrc/dataNotUsedInRankings', db.dataNotUsedInRankings )
+	precache( '/nrc/diversity', db.diversity )
+	precache( '/nrc/emergingFields', db.diversity )
+	precache( '/nrc/generalInformation', db.diversity )
+	precache( '/nrc/otherOverallRankingMeasures', db.diversity )
+	precache( '/nrc/rankings', db.diversity )
+	precache( '/nrc/researchActivity', db.diversity )
+	precache( '/nrc/studentActivities', db.diversity )
+	precache( '/nrc/studentSupportAndOutcomes', db.diversity )
+}
+
 app.listen(3000)
 console.log('Node.js Express server is running on port 3000...')
 
@@ -58,54 +89,68 @@ function getTimeToDegreeForProgram(req, res) {
 	)
 }
 
-function send(req, res, collection) {
-	collection.find( {}, {_id: 0 }, function(err, docs) {
-		if (err) {
-			res.send(err)
+function send(req, res, route, collection) {
+	if (route == undefined) {
+		throw Error("route is undefined")
+	}
+	if (collection == undefined) {
+		throw Error("collection is undefined")
+	}
+
+	redisClient.get( route, function(err, reply) {
+		if (!err && reply != null) {
+			res.json( reply )
 		} else {
-			res.json(docs)
+			console.log('Not in redis :(')
+			collection.find( {}, {_id: 0 }, function(err, docs) {
+				if (err) {
+					res.send(err)
+				} else {
+					res.json(docs)
+				}
+			})
 		}
 	})
 }
 
 function getDataNotUsedInRankings(req, res) {
-	send(req, res, db.dataNotUsedInRankings)
+	send(req, res, '/nrc/dataNotUsedInRankings', db.dataNotUsedInRankings)
 }
 
 function getDiversity(req, res) {
-	send(req, res, db.diversity)
+	send(req, res, '/nrc/diversity', db.diversity)
 }
 
 function getEmergingFields(req, res) {
-	send(req, res, db.emergingFields)
+	send(req, res, '/nrc/emergingFields', db.emergingFields)
 }
 
 function getGeneralInformation(req, res) {
-	send(req, res, db.generalInformation)
+	send(req, res, '/nrc/generalInformation', db.generalInformation)
 }
 
 function getOtherOverallRankingMeasures(req, res) {
-	send(req, res, db.otherOverallRankingMeasures)
+	send(req, res, '/nrc/otherOverallRankingMeasures', db.otherOverallRankingMeasures)
 }
 
 function getGeneralInformation(req, res) {
-	send(req, res, db.generalInformation)
+	send(req, res, '/nrc/generalInformation', db.generalInformation)
 }
 
 function getRankings(req, res) {
-	send(req, res, db.rankings)
+	send(req, res, '/nrc/rankings', db.rankings)
 }
 
 function getResearchActivity(req, res) {
-	send(req, res, db.researchActivity)
+	send(req, res, '/nrc/researchActivity', db.researchActivity)
 }
 
 function getStudentActivities(req, res) {
-	send(req, res, db.studentActivities)
+	send(req, res, '/nrc/studentActivities', db.studentActivities)
 }
 
 function getStudentSupportAndOutcomes(req, res) {
-	send(req, res, db.studentSupportAndOutcomes)
+	send(req, res, '/nrc/studentSupportAndOutcomes', db.studentSupportAndOutcomes)
 }
 
 module.exports.server = app
