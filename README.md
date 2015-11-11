@@ -49,3 +49,8 @@ $ npm test
 This is, in fact, what I have TravisCI do on my behalf.  If you run the acceptance tests yourself, then it might look like so:
 
 ![image](https://cloud.githubusercontent.com/assets/4765449/10952204/cff00ca2-82fe-11e5-9444-0e121971aaee.png)
+
+
+# Why no Redis?
+
+See [Issue #3](https://github.com/wbraynen/lighthouse-api/issues/3).
