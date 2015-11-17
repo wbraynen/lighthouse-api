@@ -51,14 +51,15 @@ $ node app  # on your dev laptop; in production, at the very least, [Upstart](ht
 Launch mongo:
 ```
 $ mongod --config /usr/local/etc/mongod.conf   # This will run it once, not on login
+```
 
 Use mongo shell:
 ```
 $ mongo   # This will launch the mongo shell
 
-$$ cls
-$$ show dbs
-$$ use nrc   # [creates and] switches to database `nrc`
+> cls
+> show dbs
+> use nrc   # [creates and] switches to database `nrc`
 ```
 
 ### Launching sublime from a macos terminal
